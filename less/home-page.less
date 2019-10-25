@@ -9,13 +9,23 @@
    
     
     .text-content {
-      width: 48%;
+      width: 44%;
       padding-right: 1%;
+
+      @media @phone{
+        width:90%;
+        
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @phone{
+        width:90%;
+        height:50vh;
+      }
 
       img {
         border-radius: 10px;
@@ -26,22 +36,28 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+   
+    
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      
+     
     }
 
     .img-content {
       padding-right: 1%;
-      padding-left: 0;
+      padding-left: 0%;
     }
   }
 
   .content-destination {
-    width: 75%;
+    width: 45%;
     margin: 0 auto 30px;
-
+    .flexRow(column,center);
+    height:50vh;
     img {
       border-radius: 10px;
     }
@@ -58,4 +74,73 @@
       margin-bottom: 30px;
     }
   }
-}// home
+
+  header{
+    height:15vh;
+     padding:2%;
+     width:100%;
+     .flexRow(row,space-between);
+
+     @media @phone{
+      
+       .flexCol(column,center);
+     }
+}
+
+
+
+.welcomeText{
+  height:auto;
+  .flexRow(row,center);
+
+  @media @phone{
+    .flexCol(column,center);
+  }
+}
+
+.welcomeTextContent{
+  width:90%;
+  padding:1%;
+  border-bottom: 2px dashed @navigation-border;
+  
+  @media @phone{
+    width:100%;
+  }
+}
+
+.content-section{
+  .flexRow(row,flex-end);
+  width:100%;
+
+  @media @phone{
+    .flexCol(column,center);
+  }
+ 
+  
+}
+.btn{
+  .createFooterButton();
+  @media @phone{
+    position: relative;
+    right:55%;
+  }
+}
+
+.inverse-content{
+  @media @phone{
+    .flexCol(column-reverse,center);
+  }
+}
+
+.content-pick{
+  @media @phone{
+    .flexCol(column,center);
+  }
+}
+
+
+
+
+}
+
+
