@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4rem;
+  margin:1%;
 }
 
 h2 {
@@ -40,7 +41,33 @@ img {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
+
+  @media @phone{
+max-width:500px;
+  }
+}
+
+hr{
+  width:140%;
+  position: relative;
+  right:20%;
+  border: 2px dashed @navigation-border;
+  color: #fff; 
+  background-color: #fff;
+}
+
+#busPic{
+  margin-left:12%;
+
+  @media @phone{
+    position: relative;
+    right:12%;
+  }
+
+  
+ 
+  
 }

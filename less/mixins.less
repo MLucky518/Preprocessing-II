@@ -1,1 +1,63 @@
-// Mixins in here
+// Sets the flex direction and content position for row items
+
+.flexRow (@direction,@position){
+
+    display:flex;
+    flex-direction: @direction;
+    justify-content: @position;
+
+
+}
+
+.flexCol(@direction,@position){
+
+    display:flex;
+    flex-direction: @direction;
+    align-items: @position;
+
+
+}
+
+
+
+.createNavButton(){
+ text-decoration:none;
+ padding:4%;
+ font-size:1.5rem;
+ margin-top:2%;
+ color:black;
+
+ &:hover{
+     background:@eastern-blue;
+     color:white;
+ }
+    
+}
+
+.createFooterButton(){
+    margin: 10px 20px;
+    padding: 2%;
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+    height: 4vh;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: @button-bg;
+    color: white;
+&:hover{
+    background:white;
+    color:@button-bg;
+    border:2px solid @button-bg;
+}
+
+    @media @phone{
+        height:6vh;
+        width:250px;
+        padding-top:10%;
+        
+      }
+   
+
+}
+
